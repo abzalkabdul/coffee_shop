@@ -9,11 +9,24 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'menu/style.css' %}">
 
-    <img src="images/startbucks_icon.jpeg" alt="starbucks icon">
-    <ul>
-        <li><a href="" class="menu">MENU</a></li>
-        <li><a href="" class="rewa">REWARDS</a></li>
-        <li><a href="" class="menu">GIFT CARDS</a></li>
-    </ul>
+    <img src="{% static 'menu/images/starbucks_icon.jpeg' %}" alt="starbucks icon">
+    <nav>
+        <div class="left_bar">
+            <ul>
+                <li><a href="{% url 'core:menu'%}" class="menu">MENU</a></li>
+                <li><a href="{% url 'core:rewards'%}" class="rewards">REWARDS</a></li>
+                <li><a href="{% url 'core:gift_cards'%}" class="gift_cards">GIFT CARDS</a></li>
+            </ul>
+        </div>
+
+        <div class="right_bar">
+            <button id="sign_in">Sign in</button>
+            <button id="join_now">Join Now</button>
+        </div> 
+    </nav>
+
+    {% block content %}{% endblock content %}
+
+
 </body>
 </html>
