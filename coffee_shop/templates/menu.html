@@ -1,5 +1,33 @@
 {% extends 'base.html'%}
-
+{% load static %}
 {% block content %}
-    <p>Menu</p>
+    <link rel="stylesheet" href="{% static 'menu/menu.css'%}">
+    <div class="menu-categories">
+        <ul>
+            <li><a href="{% url 'core:menu' %}">Menu</a></li>
+            <li><a href="">Featured</a></li>
+            <li><a href="">Previous</a></li>
+            <li><a href="">Favorites</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="menu-side-nav">
+        </div>
+
+        <div class="menu-products">
+            <h1 id="just-menu">Menu</h1>
+            <section class="section1">
+                {% comment %} {% for ...%}
+                {% endfor %} {% endcomment %}
+            </section>
+            <section class="section1">
+                {% comment %} {% for ...%}
+                {% endfor %} {% endcomment %}
+            </section>
+        </div>
+
+    </div>
+    <footer>
+
+    </footer>
 {% endblock content %}
